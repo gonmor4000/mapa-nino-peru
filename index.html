@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa El Niño Perú</title>
+<meta name="description" content="Mapa de inundaciones, huaicos, desagües y daños durante el Fenómeno El Niño en el Perú, con un color según la fiabilidad de cada fuente.">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <div id="map" aria-label="Mapa del Perú con puntos de incidentes"></div>
+  <aside>
+    <h1>Mapa El Niño · Perú</h1>
+    <p class="sub">Inundaciones, huaicos, desagües y daños, empezando por Lima. Cada punto tiene un color según cuán confiable es su fuente. Ubicaciones aproximadas.</p>
+    <div class="row">
+      <button class="btn ghost" id="limaBtn">Lima</button>
+      <button class="btn ghost" id="peruBtn">Todo Perú</button>
+    </div>
+    <div class="counts" id="counts"></div>
+    <div id="detail"><h2>Detalle</h2><p class="empty">Toca un punto del mapa para ver de dónde viene la información.</p></div>
+    <h2>Fiabilidad</h2>
+    <div class="legend">
+      <label><input type="checkbox" data-c="verde" checked><span class="dot verde"></span><span><b>Verde:</b> confirmado por una entidad oficial o un sensor.</span></label>
+      <label><input type="checkbox" data-c="amarillo" checked><span class="dot amarillo"></span><span><b>Amarillo:</b> medio de prensa serio o 3 o más vecinos.</span></label>
+      <label><input type="checkbox" data-c="naranja" checked><span class="dot naranja"></span><span><b>Naranja:</b> un solo reporte, aún sin confirmar.</span></label>
+      <label><input type="checkbox" data-c="gris" checked><span class="dot gris"></span><span><b>Gris:</b> zona de riesgo conocida, no un evento en curso.</span></label>
+    </div>
+    <p class="note">Usa el control de la esquina del mapa para cambiar entre calles, relieve, satélite y noche. Los reportes de vecinos llegarán en la próxima versión.</p>
+  </aside>
+</div>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
