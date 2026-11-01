@@ -2,8 +2,8 @@
 
 Mapa web de inundaciones, huaicos, desagües, incendios, sismos y otros fenómenos durante El Niño, empezando por Lima.
 
-- **Color = qué pasó:** azul agua, marrón huaico o deslizamiento, rojo incendio, morado sismo, naranja volcán u otro fenómeno, negro colapso, gris vía cortada.
-- **Forma = qué tan seguro:** punto lleno si es oficial o de un sensor, borde punteado si viene de prensa, hueco si es un reporte sin confirmar. Las zonas de riesgo son manchas sombreadas.
+- **Símbolo y color = qué pasó:** nube con lluvia, cerro con rocas, llama, onda sísmica, volcán, edificio agrietado y barrera de vía; azul agua, marrón huaico o deslizamiento, rojo incendio, morado sismo, naranja volcán u otro fenómeno, negro colapso, gris vía cortada.
+- **Borde = qué tan seguro:** símbolo lleno si es oficial o de un sensor, borde punteado si viene de prensa, fondo blanco si es un reporte sin confirmar. Las zonas de riesgo son manchas sombreadas.
 - **Tamaño = gravedad:** en los sismos, la magnitud.
 
 Mapas base: calles (OpenStreetMap), relieve (OpenTopoMap), satélite (Esri) y noche (CARTO).

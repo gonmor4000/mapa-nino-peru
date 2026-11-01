@@ -22,6 +22,19 @@ const FIAB = {
   vecinos: {texto:"Reporte de vecinos o redes, aún sin confirmar."},
   riesgo:  {texto:"Zona con riesgo conocido. No significa que haya un problema ahora."},
 };
+// Símbolos (SVG 24x24, trazo blanco) por categoría
+const ICONS = {
+  agua: '<path d="M7 15a4 4 0 0 1 .5-8 5 5 0 0 1 9.6 1.4A3.3 3.3 0 0 1 17 15z"/><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3"/>',
+  huaico: '<path d="M2 20l7-12 4 6 2-3 7 9z"/><circle cx="17" cy="5" r="1.6"/><circle cx="20" cy="9" r="1.2"/><path d="M13 3l2 2"/>',
+  incendio: '<path d="M12 22c4 0 7-2.7 7-7 0-4-3-6-4-10-1.5 2-2 4-2 5-1-1-2-2.5-2.5-4C8 9 5 12 5 15c0 4.3 3 7 7 7z"/><path d="M12 22c-1.7 0-3-1.2-3-3 0-1.6 1.5-2.6 2-4 1 1.2 4 2.2 4 4 0 1.8-1.3 3-3 3z"/>',
+  sismo: '<path d="M2 12h4l2-6 3 13 3-10 2 6 1.5-3H22"/>',
+  volcan: '<path d="M2 21l6-9h8l6 9z"/><path d="M9 12l1.5 3 1.5-2 1.5 2L15 12"/><path d="M10 8c0-2 2-2 2-4M14 8c0-2 2-2 2-4"/>',
+  colapso: '<path d="M4 21V5h7l-2 5 3 2-2 4 2 5"/><path d="M14 21V9h6v12"/><path d="M2 21h20M16.5 12h1.5M16.5 15.5h1.5"/>',
+  via: '<rect x="2" y="7" width="20" height="6" rx="1"/><path d="M6 7l-4 6M11 7l-4 6M16 7l-4 6M21 7l-4 6"/><path d="M5 13v8M19 13v8"/>',
+};
+function markerHTML(cat, fiab, size){
+  return `<span class="mk f-${fiab}" style="--c:${CATS[cat].color};--s:${size}px"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[cat]||ICONS.volcan}</svg></span>`;
+}
 const catOf = tipo => Object.keys(CATS).find(c => CATS[c].tipos.includes(tipo)) || "volcan";
 
 const map = L.map("map").fitBounds(LIMA);
@@ -61,7 +74,7 @@ function showDetail(p){
   const cat = catOf(p.tipo), f = FIAB[p.fiabilidad] || FIAB.prensa;
   let h = `<h2>Detalle</h2><div class="card">`;
   if(p.imagen) h += `<figure class="photo"><a href="${esc(p.url||p.imagen)}" target="_blank" rel="noopener"><img src="${esc(p.imagen)}" alt="${esc(p.titulo)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('figure').remove()"></a>${p.credito_imagen?`<figcaption>Foto: ${esc(p.credito_imagen)}</figcaption>`:""}</figure>`;
-  h += `<div class="title"><span class="sym" style="--c:${CATS[cat].color}" data-f="${esc(p.fiabilidad)}"></span><b>${esc(p.titulo)}</b></div>`;
+  h += `<div class="title">${markerHTML(cat, p.fiabilidad, 22)}<b>${esc(p.titulo)}</b></div>`;
   h += `<p class="k">Qué pasó</p><div>${esc(TYPES[p.tipo] || p.tipo)}${p.magnitud?` · magnitud ${esc(p.magnitud)}`:""}</div>`;
   h += `<p class="k">Qué tan seguro</p><div>${esc(f.texto)}</div>`;
   if(p.fecha) h += `<p class="k">Fecha</p><div>${esc(fmtDate(p.fecha))}</div>`;
@@ -82,20 +95,16 @@ function addPoint(p){
       .bindTooltip("Zona de riesgo: " + esc(p.titulo)).on("click", ()=>showDetail(p)).addTo(riskLayer);
     riskCount++; return;
   }
-  const r = p.magnitud ? Math.max(6, (p.magnitud - 2) * 4) : 9;
-  const style = {
-    oficial: {color:"#fff", weight:2, fillColor:color, fillOpacity:.95},
-    prensa:  {color, weight:2.5, dashArray:"3 3", fillColor:color, fillOpacity:.75},
-    vecinos: {color, weight:3, fillColor:"#fff", fillOpacity:.6},
-  }[p.fiabilidad] || {color, weight:2, fillColor:color, fillOpacity:.75};
-  L.circleMarker([p.lat, p.lon], {radius:r, ...style})
-    .bindTooltip(esc(p.titulo)).on("click", ()=>showDetail(p)).addTo(catLayers[cat]);
+  const size = p.magnitud ? Math.round(Math.max(22, 22 + (p.magnitud - 2.5) * 7)) : 30;
+  const icon = L.divIcon({className:"mk-wrap", html:markerHTML(cat, p.fiabilidad, size), iconSize:[size,size], iconAnchor:[size/2,size/2]});
+  L.marker([p.lat, p.lon], {icon, title:p.titulo, riseOnHover:true})
+    .bindTooltip(esc(p.titulo), {offset:[size/2,0]}).on("click", ()=>showDetail(p)).addTo(catLayers[cat]);
   counts[cat]++;
 }
 
 function renderLegend(){
   document.getElementById("cats").innerHTML = Object.entries(CATS).map(([c,v]) =>
-    `<label><input type="checkbox" data-c="${c}" ${map.hasLayer(catLayers[c])?"checked":""}><span class="sym" style="--c:${v.color}" data-f="oficial"></span><span>${v.nombre} <span class="n">${counts[c]}</span></span></label>`).join("");
+    `<label><input type="checkbox" data-c="${c}" ${map.hasLayer(catLayers[c])?"checked":""}>${markerHTML(c, "oficial", 22)}<span>${v.nombre} <span class="n">${counts[c]}</span></span></label>`).join("");
   document.getElementById("risknum").textContent = riskCount;
   document.querySelectorAll("#cats input").forEach(cb => cb.addEventListener("change", ()=>{
     const l = catLayers[cb.dataset.c]; cb.checked ? l.addTo(map) : map.removeLayer(l);
