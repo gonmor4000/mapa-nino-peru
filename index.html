@@ -13,20 +13,24 @@
   <div id="map" aria-label="Mapa del Perú con puntos de incidentes"></div>
   <aside>
     <h1>Mapa El Niño · Perú</h1>
-    <p class="sub">Inundaciones, huaicos, desagües y daños, empezando por Lima. Cada punto tiene un color según cuán confiable es su fuente. Ubicaciones aproximadas.</p>
+    <p class="sub">Inundaciones, huaicos, desagües y daños, empezando por Lima. Cada símbolo y color dice qué pasó, y el borde, qué tan segura es la fuente. Toca un símbolo para ver el detalle.</p>
     <div class="row">
       <button class="btn ghost" id="limaBtn">Lima</button>
       <button class="btn ghost" id="peruBtn">Todo Perú</button>
     </div>
-    <div class="counts" id="counts"></div>
     <div id="detail"><h2>Detalle</h2><p class="empty">Toca un punto del mapa para ver de dónde viene la información.</p></div>
-    <h2>Fiabilidad</h2>
-    <div class="legend">
-      <label><input type="checkbox" data-c="verde" checked><span class="dot verde"></span><span><b>Verde:</b> confirmado por una entidad oficial o un sensor.</span></label>
-      <label><input type="checkbox" data-c="amarillo" checked><span class="dot amarillo"></span><span><b>Amarillo:</b> medio de prensa serio o 3 o más vecinos.</span></label>
-      <label><input type="checkbox" data-c="naranja" checked><span class="dot naranja"></span><span><b>Naranja:</b> un solo reporte, aún sin confirmar.</span></label>
-      <label><input type="checkbox" data-c="gris" checked><span class="dot gris"></span><span><b>Gris:</b> zona de riesgo conocida, no un evento en curso.</span></label>
+    <h2>Qué pasó (símbolo y color)</h2>
+    <div class="legend" id="cats"></div>
+    <h2>Qué tan seguro (borde)</h2>
+    <div class="legend shapes">
+      <div><span class="mk f-oficial" style="--c:#555;--s:22px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 3 13 3-10 2 6 1.5-3H22"/></svg></span><span><b>Símbolo lleno:</b> oficial o sensor.</span></div>
+      <div><span class="mk f-prensa" style="--c:#555;--s:22px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 3 13 3-10 2 6 1.5-3H22"/></svg></span><span><b>Borde punteado:</b> prensa, sin confirmación oficial.</span></div>
+      <div><span class="mk f-vecinos" style="--c:#555;--s:22px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2-6 3 13 3-10 2 6 1.5-3H22"/></svg></span><span><b>Fondo blanco:</b> reporte sin confirmar.</span></div>
+      <div><span class="sym" style="--c:#555" data-f="riesgo"></span><span><b>Mancha sombreada:</b> zona de riesgo (<span id="risknum">0</span>), no un evento en curso.</span></div>
+      <p class="note">En los sismos, el tamaño del símbolo indica la magnitud.</p>
     </div>
+    <h2>Datos automáticos</h2>
+    <div class="note" id="feeds"></div>
     <p class="note">Usa el control de la esquina del mapa para cambiar entre calles, relieve, satélite y noche. Los reportes de vecinos llegarán en la próxima versión.</p>
   </aside>
 </div>

@@ -2,23 +2,27 @@
  {
   "titulo": "Bypass Av. Pachacútec inundado y cerrado",
   "tipo": "inundacion",
-  "color": "amarillo",
   "lat": -12.1585,
   "lon": -76.9445,
   "fecha": "2026-10-23",
   "descripcion": "La parte baja del bypass quedó anegada tras la llovizna de la noche y madrugada. Se retiró el agua con hidrojets y cisternas. Villa María del Triunfo.",
   "fuente": "La República (23 oct 2026)",
-  "url": "https://larepublica.pe/sociedad/2026/10/23/bypass-de-la-avenida-pachacutec-en-villa-maria-del-triunfo-permanece-cerrado-tras-intensa-llovizna-423062"
+  "url": "https://larepublica.pe/sociedad/2026/10/23/bypass-de-la-avenida-pachacutec-en-villa-maria-del-triunfo-permanece-cerrado-tras-intensa-llovizna-423062",
+  "imagen": "https://imgmedia.larepublica.pe/1200x735/larepublica/original/2026/10/23/6adb62377509cf5b3a0b0940.jpg",
+  "credito_imagen": "América Noticias, vía La República",
+  "fiabilidad": "prensa"
  },
  {
   "titulo": "Baipás Nueva Esperanza inundado por sexta vez en el año",
   "tipo": "inundacion",
-  "color": "amarillo",
   "lat": -12.169,
   "lon": -76.937,
   "fecha": "2026-10-02",
   "descripcion": "El acceso se cerró y los conductores se desviaron por la Av. 26 de Noviembre. Villa María del Triunfo.",
   "fuente": "La República (2 oct 2026)",
-  "url": "https://larepublica.pe/sociedad/2026/10/02/baipas-nueva-esperanza-se-inunda-por-sexta-vez-en-el-ano-tras-intensa-llovizna-en-villa-maria-del-triunfo-134376"
+  "url": "https://larepublica.pe/sociedad/2026/10/02/baipas-nueva-esperanza-se-inunda-por-sexta-vez-en-el-ano-tras-intensa-llovizna-en-villa-maria-del-triunfo-134376",
+  "imagen": "https://imgmedia.larepublica.pe/1200x735/larepublica/original/2026/10/02/6abfb027c07d2513880d2e1b.jpg",
+  "credito_imagen": "Composición La República",
+  "fiabilidad": "prensa"
  }
 ]
