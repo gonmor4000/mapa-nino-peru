@@ -1,0 +1,155 @@
+[
+ {
+  "titulo": "Bypass Av. Brasil - La Marina",
+  "lat": -12.0772,
+  "lon": -77.0638,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass Av. Arequipa - Javier Prado",
+  "lat": -12.0905,
+  "lon": -77.0352,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass 28 de Julio (Vía Expresa)",
+  "lat": -12.064,
+  "lon": -77.0322,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass Av. México",
+  "lat": -12.0745,
+  "lon": -77.0298,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Javier Prado - Vía Expresa",
+  "lat": -12.0908,
+  "lon": -77.0272,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass Alfonso Ugarte",
+  "lat": -12.056,
+  "lon": -77.0428,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass Av. Tingo María",
+  "lat": -12.0612,
+  "lon": -77.056,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Bypass Benavides - Panamericana Sur",
+  "lat": -12.129,
+  "lon": -76.999,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Av. Universitaria - Panamericana Norte",
+  "lat": -11.9892,
+  "lon": -77.064,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Óvalo Pachacútec (Real Plaza), VMT",
+  "lat": -12.1585,
+  "lon": -76.9445,
+  "tipo": "inundacion",
+  "color": "gris",
+  "fuente": "El Comercio, sobre evaluación de CENEPRED (31 oct 2026)",
+  "url": "https://elcomercio.pe/lima/transporte/lluvias-en-lima-20-de-los-33-bypasses-evaluados-por-cenepred-presentan-riesgo-de-inundacion-noticia"
+ },
+ {
+  "titulo": "Jr. Trujillo, Rímac (desborde del río)",
+  "lat": -12.0418,
+  "lon": -77.0302,
+  "tipo": "rio",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Piedra Liza, Rímac",
+  "lat": -12.033,
+  "lon": -77.015,
+  "tipo": "rio",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Alameda Chabuca Granda / Parque La Muralla",
+  "lat": -12.0442,
+  "lon": -77.029,
+  "tipo": "rio",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Av. Morales Duárez, puente Dueñas",
+  "lat": -12.042,
+  "lon": -77.064,
+  "tipo": "rio",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Los Tusílagos, SJL (colectores de desagüe)",
+  "lat": -12.001,
+  "lon": -77.0,
+  "tipo": "desague",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Chaclacayo: lluvias intensas en cuenca media",
+  "lat": -11.979,
+  "lon": -76.77,
+  "tipo": "huaico",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ },
+ {
+  "titulo": "Chosica: lluvias intensas en cuenca media",
+  "lat": -11.937,
+  "lon": -76.696,
+  "tipo": "huaico",
+  "color": "gris",
+  "fuente": "Infobae, con datos de El Niño Observatory (30 oct 2026)",
+  "url": "https://www.infobae.com/peru/2026/10/30/lima-contra-el-meganino-estas-son-las-zonas-mas-vulnerables-frente-a-inundaciones-y-un-posible-desborde-del-rio-rimac/"
+ }
+]
