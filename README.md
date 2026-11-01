@@ -1,19 +1,17 @@
 # Mapa El Niño Perú
 
-Mapa web de inundaciones, huaicos, desagües y daños durante el Fenómeno El Niño, empezando por Lima. Cada punto tiene un color según la fiabilidad de su fuente:
+Mapa web de inundaciones, huaicos, desagües, incendios, sismos y otros fenómenos durante El Niño, empezando por Lima.
 
-| Color | Significa |
-| --- | --- |
-| Verde | Confirmado por una entidad oficial o un sensor |
-| Amarillo | Medio de prensa serio, o 3 o más vecinos |
-| Naranja | Un solo reporte, aún sin confirmar |
-| Gris | Zona de riesgo conocida, no un evento en curso |
+- **Color = qué pasó:** azul agua, marrón huaico o deslizamiento, rojo incendio, morado sismo, naranja volcán u otro fenómeno, negro colapso, gris vía cortada.
+- **Forma = qué tan seguro:** punto lleno si es oficial o de un sensor, borde punteado si viene de prensa, hueco si es un reporte sin confirmar. Las zonas de riesgo son manchas sombreadas.
+- **Tamaño = gravedad:** en los sismos, la magnitud.
 
 Mapas base: calles (OpenStreetMap), relieve (OpenTopoMap), satélite (Esri) y noche (CARTO).
 
 ## Datos
 
-- `data/incidentes.json`: eventos ocurridos, con fuente y fecha.
+- `data/incidentes.json`: eventos ocurridos, con fuente, fecha, `fiabilidad` (oficial, prensa o vecinos) y, si hay, `imagen` y `credito_imagen`.
+- Sismos (USGS) e incendios, volcanes y otros eventos (NASA EONET) se leen automáticamente al abrir el mapa.
 - `data/zonas-riesgo.json`: zonas de riesgo conocidas (CENEPRED y prensa).
 - `data/distritos.json`: nombres y límites aproximados de los distritos del Perú.
 

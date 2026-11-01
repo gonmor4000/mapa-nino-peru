@@ -12,12 +12,20 @@ h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute
 .row{display:flex;gap:8px;margin:10px 0}
 .btn{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:600 13px inherit;cursor:pointer}
 .legend label{display:flex;gap:8px;align-items:flex-start;margin:6px 0;line-height:1.35;cursor:pointer}
-.dot{width:12px;height:12px;border-radius:50%;flex:none;margin-top:2px;display:inline-block}
-.dot.verde{background:var(--verde)}.dot.amarillo{background:var(--amarillo)}.dot.naranja{background:var(--naranja)}.dot.gris{background:var(--gris);opacity:.6}
-.counts{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
 .card{border:1px solid var(--line);border-radius:10px;padding:12px}
 .card .k{color:var(--muted);font-size:12px;margin:8px 0 2px}
 .card a{color:#1d4ed8}
 .empty{color:var(--muted)}
 .dist-label{background:none;border:0;box-shadow:none;color:#333;font:500 11px system-ui,sans-serif;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;white-space:nowrap;padding:0}
 .dist-label::before{display:none}
+.legend > div{display:flex;gap:8px;align-items:flex-start;margin:6px 0;line-height:1.35}
+.legend .n{color:var(--muted);font-size:12px}
+.sym{width:14px;height:14px;border-radius:50%;flex:none;margin-top:2px;display:inline-block;box-sizing:border-box;background:var(--c);border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.sym[data-f=prensa]{border:2px dashed var(--c);background:color-mix(in srgb,var(--c) 75%,transparent);box-shadow:none}
+.sym[data-f=vecinos]{background:#fff;border:3px solid var(--c);box-shadow:none}
+.sym[data-f=riesgo]{width:18px;height:18px;margin-top:0;background:color-mix(in srgb,var(--c) 22%,transparent);border:1.5px dashed var(--c);box-shadow:none}
+.card .title{display:flex;gap:8px;align-items:flex-start}
+.photo{margin:-12px -12px 10px;border-radius:10px 10px 0 0;overflow:hidden}
+.photo img{display:block;width:100%;max-height:220px;object-fit:cover}
+.photo figcaption{font-size:11px;color:var(--muted);padding:4px 12px 0}
+#feeds div{margin:3px 0}
