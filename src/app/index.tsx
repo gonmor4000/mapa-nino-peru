@@ -1,12 +1,20 @@
 import { router, useFocusEffect } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useCallback, useState } from 'react';
+import * as Updates from 'expo-updates';
 import { FlatList, Pressable, Text, View } from 'react-native';
 
 import { createProject, listProjects } from '@/db/repo';
 import type { Project } from '@/model/types';
 import { Button } from '@/ui/controls';
 import { colors, ui } from '@/ui/theme';
+
+const appVersionLabel = (() => {
+  const date = Updates.isEmbeddedLaunch ? null : Updates.createdAt;
+  return date
+    ? `Version ${Updates.runtimeVersion} · mise à jour du ${date.toLocaleDateString('fr-FR')}`
+    : `Version ${Updates.runtimeVersion ?? 'dev'} · d’origine`;
+})();
 
 export default function ProjectsScreen() {
   const db = useSQLiteContext();
@@ -46,6 +54,9 @@ export default function ProjectsScreen() {
             </Text>
           </Pressable>
         )}
+        ListFooterComponent={
+          <Text style={[ui.muted, { textAlign: 'center', marginTop: 24, fontSize: 12 }]}>{appVersionLabel}</Text>
+        }
       />
     </View>
   );

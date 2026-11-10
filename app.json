@@ -22,7 +22,6 @@
       "predictiveBackGestureEnabled": false,
       "package": "fr.dtgsimple.app",
       "permissions": [
-        "android.permission.RECORD_AUDIO",
         "android.permission.RECORD_AUDIO"
       ]
     },
@@ -64,9 +63,13 @@
       }
     },
     "owner": "milun007",
-    "runtimeVersion": "exposdk:58.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "updates": {
-      "url": "https://u.expo.dev/fce58727-f9e4-4a6f-a4a6-770e2d5df9d2"
+      "url": "https://u.expo.dev/fce58727-f9e4-4a6f-a4a6-770e2d5df9d2",
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
     }
   }
 }

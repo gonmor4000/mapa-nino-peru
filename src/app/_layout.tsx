@@ -4,8 +4,11 @@ import { StatusBar } from 'expo-status-bar';
 
 import { migrate } from '@/db/schema';
 import { colors } from '@/ui/theme';
+import { useOtaUpdates } from '@/updates/use-ota-updates';
 
 export default function RootLayout() {
+  useOtaUpdates();
+
   return (
     <SQLiteProvider databaseName="dtg.db" onInit={migrate}>
       <StatusBar style="dark" />
